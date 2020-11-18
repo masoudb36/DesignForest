@@ -1,0 +1,77 @@
+.slider{
+    position: relative;
+    
+    z-index: 1;
+    
+    &__item{
+        // position: absolute;
+        display: none;
+        opacity: 0.4;
+        & img{
+            width: 100%;
+            height: calc(100vh - 12.5rem);
+            border-radius: 10px;
+            @media only screen and (max-width: $bp-medium){
+                height: calc(100vh - 21.5rem);
+        
+            }
+            @media only screen and (max-width: $bp-small){
+                height: 30vh;
+        
+            }
+        }
+
+        &--info{
+            position: absolute;
+            top: 40%;
+            right: 4rem;
+            color: $white-color;
+            span{
+                font-size: 1.8rem;
+            }
+            h2{
+                font-size: 2.6rem;
+            }
+        }
+        &--slide{
+            animation: slide 0.8s forwards   ;  
+        }
+    }
+    &__dots{
+        display: flex;
+        justify-content: center;
+
+        &--item{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            border: 1px solid $primary-color;
+            margin: 1rem 0.5rem;
+            cursor: pointer;
+            transition: all 0.4s;
+            &:hover{
+                background-color: $primary-color;
+            }
+        }
+
+        &--active{
+            width: 3rem;
+            border-radius: 10px;
+            background-color: $primary-color;
+        }
+    }
+
+}
+
+
+@keyframes slide{
+    0%{
+        opacity: 0.4;
+        transform: translateX(100%);
+    }
+    100%{
+        opacity: 1;
+
+        transform: translateX(0);
+    }
+}

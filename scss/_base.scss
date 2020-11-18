@@ -1,0 +1,77 @@
+// Font
+@font-face {
+	font-family: 'Samim';
+	src: url('../fonts/Samim.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Samim.woff') format('woff'), url('../fonts/Samim.ttf') format('truetype'),
+		url('../fonts/Samim.svg#Samim') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Samim_num';
+	src: url('../fonts/num/Samim-FD-FD.eot') format('embedded-opentype'),
+		url('../fonts/num/Samim-FD.woff') format('woff'),
+		url('../fonts/num/Samim-FD.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+$font-primary: 'Samim', Verdana, Geneva, Tahoma, sans-serif;
+$font-num: 'Samim_num';
+
+// Variables
+
+$website-width: 1200px;
+$bp-largest: 75em; // 1120px
+$bp-large: 62.5em; // 1000px
+$bp-medium: 56.25em; // 900px;
+$bp-small: 37.5em; // 600px;
+ 
+// Colors
+$black-color:#000;
+$primary-color:#f85203;
+$secondary-color:#d7e100;
+$text-color:#007c8a;
+$white-color:#fff;
+$bg-color:#fee5d9;
+
+// Shadow
+$shadow-btn:0 4px 9px 0px #c1c1c1;
+
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+	@media only screen and (max-width: $bp-largest) {
+        font-size: 50%;
+    }
+}
+
+body {
+	font-family: $font-primary;
+	// color: $dark-color;
+    line-height: 1.8;
+    direction: rtl;
+}
+
+a {
+	text-decoration: none;
+	color: $black-color;
+	cursor: pointer;
+}
+
+img {
+	width: 100%;
+}
+
+ul {
+	list-style: none;
+}
